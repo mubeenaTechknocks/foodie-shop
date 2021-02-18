@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldPages/admin.dart';
-import 'package:foodieadmin/goldWidgets/adminText.dart';
-import 'package:foodieadmin/goldWidgets/btForgetPassword.dart';
-import 'package:foodieadmin/goldWidgets/colorButton.dart';
-import 'package:foodieadmin/goldWidgets/goldSetting.dart';
-import 'package:foodieadmin/goldWidgets/passwordBox.dart';
-import 'package:foodieadmin/goldWidgets/textBox.dart';
+import 'package:foodieshop/goldPages/admin.dart';
+import 'package:foodieshop/goldWidgets/adminText.dart';
+import 'package:foodieshop/goldWidgets/btForgetPassword.dart';
+import 'package:foodieshop/goldWidgets/colorButton.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
+import 'package:foodieshop/goldWidgets/passwordBox.dart';
+import 'package:foodieshop/goldWidgets/textBox.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -42,7 +42,7 @@ class Login extends StatelessWidget {
                                 AdminText(
                                   width: wd / 2,
                                 ),
-                                TextBox(
+                                TextBox1(
                                   width: wd / 2,
                                   margin: EdgeInsets.symmetric(vertical: 25),
                                   hintText: 'Email',
@@ -99,7 +99,7 @@ class Login extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 AdminText(),
-                                TextBox(
+                                TextBox1(
                                   margin: EdgeInsets.symmetric(vertical: 25),
                                   hintText: 'Email',
                                   autoCorrect: false,

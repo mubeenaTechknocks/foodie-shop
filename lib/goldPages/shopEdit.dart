@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldPages/admin.dart';
-import 'package:foodieadmin/goldWidgets/appbar.dart';
-import 'package:foodieadmin/goldWidgets/colorButton.dart';
-import 'package:foodieadmin/goldWidgets/goldSetting.dart';
-import 'package:foodieadmin/goldWidgets/textBox.dart';
+import 'package:foodieshop/goldPages/admin.dart';
+import 'package:foodieshop/goldWidgets/appbar.dart';
+import 'package:foodieshop/goldWidgets/colorButton.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
+import 'package:foodieshop/goldWidgets/textBox.dart';
 
 class ShopEdit extends StatelessWidget {
   @override
@@ -72,19 +72,19 @@ class ShopEdit extends StatelessWidget {
                   'Edit Shop Account',
                   style: commonTextStyle,
                 ),
-                TextBox(
+                TextBox1(
                   margin: EdgeInsets.only(top: 25, bottom: 15),
                   hintText: 'Hotel\'s Name',
                 ),
-                TextBox(
+                TextBox1(
                   hintText: 'Hotel\'s Location, Landmark',
                 ),
-                TextBox(
+                TextBox1(
                   height: 90,
                   hintText: 'Hotel\'s Address',
                   maxLines: 5,
                 ),
-                TextBox(
+                TextBox1(
                   hintText: 'pincode',
                 ),
                 Padding(
@@ -94,15 +94,15 @@ class ShopEdit extends StatelessWidget {
                     thickness: 3,
                   ),
                 ),
-                TextBox(
+                TextBox1(
                   hintText: 'Owner\'s Name',
                 ),
-                TextBox(
+                TextBox1(
                   maxLines: 5,
                   height: 90,
                   hintText: 'Owner\'s Address',
                 ),
-                TextBox(
+                TextBox1(
                   hintText: 'Contact Number',
                 ),
                 Padding(
@@ -112,10 +112,10 @@ class ShopEdit extends StatelessWidget {
                     thickness: 3,
                   ),
                 ),
-                TextBox(
+                TextBox1(
                   hintText: 'Email',
                 ),
-                TextBox(
+                TextBox1(
                   hintText: 'Password',
                 ),
                 SizedBox(

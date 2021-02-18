@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldPages/admin.dart';
-import 'package:foodieadmin/goldPages/login.dart';
+import 'package:foodieshop/goldPages/login.dart';
+
 
 class Foodie extends StatefulWidget {
   @override

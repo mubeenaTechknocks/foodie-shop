@@ -1,9 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:foodieshop/goldWidgets/adminCard.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
-import 'package:foodieadmin/goldWidgets/adminCard.dart';
-import 'package:foodieadmin/goldWidgets/goldSetting.dart';
+
 
 class Admincontents extends StatefulWidget {
   

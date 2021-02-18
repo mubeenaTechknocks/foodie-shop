@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldWidgets/goldSetting.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
-class TextBox extends StatelessWidget {
+class TextBox1 extends StatelessWidget {
   final double height;
   final double width;
   final String hintText;
   final bool autoCorrect;
   final int maxLines;
   final EdgeInsetsGeometry margin;
-  const TextBox(
+  const TextBox1(
       {Key key,
       this.height = 50,
       this.hintText = '',

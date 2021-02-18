@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldWidgets/card.dart';
+import 'package:foodieshop/goldWidgets/card.dart';
+
 
 class AdminCard extends StatefulWidget {
   @override
@@ -19,22 +20,23 @@ class _AdminCardState extends State<AdminCard> {
           child: Container( 
             // height: height,
             margin: EdgeInsets.symmetric(vertical:10,horizontal: 28),
-            child: GridView.count(
-              scrollDirection: Axis.vertical,
-              crossAxisCount: 2,
-              crossAxisSpacing: 10.0,
-              mainAxisSpacing: 10.0,
+            child: ListView(
+              // scrollDirection: Axis.vertical,
+              // crossAxisCount: 1,
+              // crossAxisSpacing: 5.0,
+              // mainAxisSpacing: 5.0,
               children: [
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "Spoon",),
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "Lavish",),
-              ShopCard(location: "Thrissur",mobile: "9895301845",hotelname: "foodSpoot",),
-              ShopCard(location: "Thrissur",mobile: "9895301845",hotelname: "China Gate",),
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "Tea Center",),
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "Coffee Time",),
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "foodCourt",),
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "Food Time",),
-              ShopCard(location: "Thrissur ,Town",mobile: "9895301845",hotelname: "Spot Tea",),
-             
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+              ShopCard(location: "RS:/- 450",mobile: "Quantity : 1 KG",hotelname: "CHICKEN 65",),
+            
               ],
             ),
           ),

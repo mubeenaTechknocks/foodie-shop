@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldPages/adminContent.dart';
-import 'package:foodieadmin/goldPages/shopAdd.dart';
-import 'package:foodieadmin/goldWidgets/appbar.dart';
-import 'package:foodieadmin/goldWidgets/goldSetting.dart';
+import 'package:foodieshop/goldPages/adminContent.dart';
+import 'package:foodieshop/goldPages/shopAdd.dart';
+import 'package:foodieshop/goldWidgets/appbar.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
 class Admin extends StatelessWidget {
   @override

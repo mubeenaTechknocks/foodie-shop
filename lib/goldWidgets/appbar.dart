@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodieadmin/goldWidgets/constraints.dart';
-import 'package:foodieadmin/goldWidgets/goldSetting.dart';
+import 'package:foodieshop/goldWidgets/constraints.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
+
 
 class FoodieAppbar extends StatefulWidget implements PreferredSizeWidget {
  

@@ -10,7 +10,7 @@ class AdminText extends StatelessWidget {
       width: width,
       child: Row(children: [
         Text(
-          'Admin Account',
+          'Shop Account',
           style: TextStyle(color: Colors.white, fontSize: 18),
         ),
         Container(
