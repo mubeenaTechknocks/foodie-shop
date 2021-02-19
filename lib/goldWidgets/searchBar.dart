@@ -33,7 +33,7 @@ class Searchbar extends StatelessWidget {
                 border: InputBorder.none,
                 
                 icon: Icon(Icons.search,color:themewhite,size: 35,),
-                hintText: "SEARCH FOR SHOPS AND HOTELS",
+                hintText: "SEARCH DELIVERY BOYS",
                 hintStyle: TextStyle(color:themedimwhite,fontSize: 14),
                 focusColor: themewhite,
               ),),
