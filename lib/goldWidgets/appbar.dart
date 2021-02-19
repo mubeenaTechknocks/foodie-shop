@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodieshop/goldPages/login.dart';
+import 'package:foodieshop/goldPages/deliveryBoys.dart';
 import 'package:foodieshop/goldWidgets/constraints.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
@@ -29,24 +31,46 @@ class _FoodieAppbarState extends State<FoodieAppbar> {
         actions: [
           Container(
             padding: EdgeInsets.only(top:20),
-            child: Text("Admin Account",style: TextStyle(fontSize:18),)),
-          Container(
+            child: Text("SPOON",style: TextStyle(fontSize:18),)),
+            Container(
             padding: EdgeInsets.only(top:5),
             child:PopupMenuButton<String>(
               icon: Image.asset('images/arrowdown.png',),
-            onSelected:choiceAction,
-            itemBuilder: (BuildContext context){
-              return Constants.choices.map((String choice){
-                return PopupMenuItem<String>(
-                  value: choice,
-                  child: Text(choice),
-                );
-              }).toList();
-            },
-          ) ,
-            // child: AdminOptions(),
-            // child: IconButton(icon:Image.asset('images/arrowdown.png',),onPressed: (){},)
             
+              itemBuilder: (context) => [
+        PopupMenuItem(
+          
+            child: Row(
+            children: <Widget>[
+            GestureDetector(
+              child:  Text('Delevery Boys',style: TextStyle(fontSize:18),),
+              onTap:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return DeliveryBoys();
+              }));
+            }
+            
+             ),
+            
+      ],
+    )),
+  
+        PopupMenuItem(
+           
+            child: Row(
+          children: <Widget>[
+            GestureDetector(
+                onTap:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return Login();
+              }));
+            },
+              child: Text('Log Out',style: TextStyle(fontSize:18)))
+          ],
+        )),
+      ])
+
+
             ),
             
                 ],
@@ -56,16 +80,3 @@ class _FoodieAppbarState extends State<FoodieAppbar> {
   }
   
 }
-
-void choiceAction(String choice){
-    if(choice == Constants.Settings){
-    print("Setting");
-    
-    }else if(choice == Constants.SignOut){
-      
-      print('SignOut');
-    }
-    }
-    
-
-    

@@ -8,7 +8,7 @@ import 'package:foodieshop/goldWidgets/colorButton.dart';
 import 'package:foodieshop/goldWidgets/unitList.dart';
 
 
-class ShopAdd extends StatelessWidget {
+class AddDeliveryBoys extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double wt = MediaQuery.of(context).size.width;
@@ -78,41 +78,28 @@ class ShopAdd extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'ADD PRODUCT',
+                  'ADD NEW DELIVERY BOY',
                   style: commonTextStyle,
                 ),
-                SizedBox(height: 38,),
-                ImageCard(image:'images/Chicken65.jpg',whitecardheight:195,whitecardwidth: 195,imagecardheight: 190,imagecardwidth: 190,),
+               
+              
                 SizedBox(height: 30,),
                 TextBox1(
                   margin: EdgeInsets.only(top: 25, bottom: 15),
-                  hintText: 'Product Name',
-                ),             
+                  hintText: 'Name',
+                ),  
+                 TextBox1(
+                  hintText: 'Mobile Number',
+                ),  
+                  TextBox1(
+                  hintText: 'Salary',
+                ),         
                 TextBox1(
                   height: 90,
-                  hintText: 'Description',
+                  hintText: 'Notes.',
                   maxLines: 5,
                 ),
-                 
-                  Row(
-                    children:[
-                        TextBox1(
-                        margin: EdgeInsets.only(top: 25, bottom: 15),
-                        hintText: 'Quantity',
-                        width: 150,
-                        ),
-                        
-                         Container(
-                           padding: EdgeInsets.only(left:20),
-                           child: UnitList()
-                           ),
-                        ] 
-                  ),
-               
- 
-                TextBox1(
-                  hintText: 'RS/:',
-                ),
+                   
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   child: Divider(
@@ -168,3 +155,4 @@ class ShopAdd extends StatelessWidget {
     );
   }
 }
+

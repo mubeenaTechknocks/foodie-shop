@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/admin.dart';
+import 'package:foodieshop/goldWidgets/goldSetting.dart';
+import 'package:foodieshop/goldWidgets/imagecard.dart';
+import 'package:foodieshop/goldWidgets/textBox.dart';
 import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/colorButton.dart';
-import 'package:foodieshop/goldWidgets/goldSetting.dart';
-import 'package:foodieshop/goldWidgets/textBox.dart';
+import 'package:foodieshop/goldWidgets/unitList.dart';
+
 
 class ShopEdit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double wt = MediaQuery.of(context).size.width;
+    double ht = MediaQuery.of(context).size.height;
+    print('width $wt');
+    print('height $ht');
     Future<void> _showMyDialog() async {
       return showDialog<void>(
         context: context,
         barrierDismissible: false, // user must tap button!
         builder: (BuildContext context) {
           return AlertDialog(
-            backgroundColor: themecolor,
+            backgroundColor: themedimbalck,
             title: Text(
               'Discard Changes ?',
               style: commonTextStyle,
@@ -31,7 +38,9 @@ class ShopEdit extends StatelessWidget {
             ),
             actions: <Widget>[
               ColorButton(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                padding: wt > 600
+                    ? EdgeInsets.symmetric(horizontal: 50, vertical: 15)
+                    : EdgeInsets.symmetric(horizontal: 23, vertical: 8),
                 buttonColor: themegreen,
                 buttonText: ('No'),
                 buttonAction: () {
@@ -39,15 +48,15 @@ class ShopEdit extends StatelessWidget {
                 },
               ),
               ColorButton(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                padding: wt > 600
+                    ? EdgeInsets.symmetric(horizontal: 50, vertical: 15)
+                    : EdgeInsets.symmetric(horizontal: 23, vertical: 8),
                 buttonColor: Colors.red,
                 buttonText: ('Yes'),
                 buttonAction: () {
-                  Navigator.push(
+                  Navigator.pop(
                     context,
-                    MaterialPageRoute(builder: (context) {
-                      return Admin();
-                    }),
+                    MaterialPageRoute(builder: (context) => Admin()),
                   );
                 },
               ),
@@ -69,23 +78,40 @@ class ShopEdit extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Edit Shop Account',
+                  'EDIT PRODUCT',
                   style: commonTextStyle,
                 ),
+                SizedBox(height: 38,),
+                ImageCard(image:'images/Chicken65.jpg',whitecardheight:195,whitecardwidth: 195,imagecardheight: 190,imagecardwidth: 190,),
+                SizedBox(height: 30,),
                 TextBox1(
                   margin: EdgeInsets.only(top: 25, bottom: 15),
-                  hintText: 'Hotel\'s Name',
-                ),
-                TextBox1(
-                  hintText: 'Hotel\'s Location, Landmark',
-                ),
+                  hintText: 'Product Name',
+                ),             
                 TextBox1(
                   height: 90,
-                  hintText: 'Hotel\'s Address',
+                  hintText: 'Description',
                   maxLines: 5,
                 ),
+                 
+                  Row(
+                    children:[
+                        TextBox1(
+                        margin: EdgeInsets.only(top: 25, bottom: 15),
+                        hintText: 'Quantity',
+                        width: 150,
+                        ),
+                        
+                         Container(
+                           padding: EdgeInsets.only(left:20),
+                           child: UnitList()
+                           ),
+                        ] 
+                  ),
+               
+ 
                 TextBox1(
-                  hintText: 'pincode',
+                  hintText: 'RS/:',
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15),
@@ -94,30 +120,7 @@ class ShopEdit extends StatelessWidget {
                     thickness: 3,
                   ),
                 ),
-                TextBox1(
-                  hintText: 'Owner\'s Name',
-                ),
-                TextBox1(
-                  maxLines: 5,
-                  height: 90,
-                  hintText: 'Owner\'s Address',
-                ),
-                TextBox1(
-                  hintText: 'Contact Number',
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  child: Divider(
-                    color: themegreen,
-                    thickness: 3,
-                  ),
-                ),
-                TextBox1(
-                  hintText: 'Email',
-                ),
-                TextBox1(
-                  hintText: 'Password',
-                ),
+                
                 SizedBox(
                   width: double.maxFinite,
                   child: Row(
@@ -129,11 +132,13 @@ class ShopEdit extends StatelessWidget {
                           buttonAction: () {
                             _showMyDialog();
                           },
-                          
                           buttonColor: Colors.red,
-                          buttonText:'''DELETE ACCOUNT''',
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                          buttonText: 'DELETE',
+                          padding: wt > 600
+                              ? EdgeInsets.symmetric(
+                                  horizontal: 100, vertical: 20)
+                              : EdgeInsets.symmetric(
+                                  horizontal: 23, vertical: 8),
                         ),
                       ),
                       Expanded(
@@ -145,11 +150,13 @@ class ShopEdit extends StatelessWidget {
                           },
                           buttonColor: themegreen,
                           buttonText: 'UPDATE',
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 59, vertical: 8),
+                          padding: wt > 600
+                              ? EdgeInsets.symmetric(
+                                  horizontal: 100, vertical: 20)
+                              : EdgeInsets.symmetric(
+                                  horizontal: 23, vertical: 8),
                         ),
                       ),
-                     
                     ],
                   ),
                 )

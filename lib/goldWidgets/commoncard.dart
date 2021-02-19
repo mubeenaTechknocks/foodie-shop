@@ -1,50 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:foodieshop/goldPages/shopEdit.dart';
+import 'package:foodieshop/goldPages/editDeliveryBoy.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
-import 'package:foodieshop/goldWidgets/imagecard.dart';
-import 'package:foodieshop/goldWidgets/switch.dart';
 
-class ShopCard extends StatefulWidget {
- final String hotelname;
+
+class CommonCard extends StatefulWidget {
+  final String hotelname;
  final String location;
  final String mobile;
 
-  const ShopCard({Key key, this.hotelname, this.location, this.mobile}) : super(key: key);
-
+  const CommonCard({Key key, this.hotelname, this.location, this.mobile}) : super(key: key);
   @override
-  _ShopCardState createState() => _ShopCardState();
+  _CommonCardState createState() => _CommonCardState();
 }
 
-class _ShopCardState extends State<ShopCard> {
-
-  
+class _CommonCardState extends State<CommonCard> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    return  
-      
-       Card(
+    return Card(
         
         color: themedimbalck,
         shape: RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.circular(20)),
         child: Container(height: 100,
           child: Stack(
-            children:[ ImageCard(image: 'images/Chicken65.jpg',),
-
+            children:[ 
+              
+              Positioned(
+                left: width*0.03,top:height*0.012,
+                child: CircleAvatar(
+                  backgroundColor: themegreen,
+                 backgroundImage: AssetImage('images/call.png'),
+                 radius: 38,
+                 ), 
+              ),
+  
+         
                 Positioned(
                 left: width*0.25,top:height*0.02,
                 child: Text(widget.hotelname,style:TextStyle(color: themewhite,fontSize: 22,fontWeight: FontWeight.w800))
                 ),
               
                 Positioned(
-                left: width*0.25,top: height*0.06,
+                left: width*0.25,top: height*0.07,
                 child: Text(widget.location,style:TextStyle(color: themewhite,fontSize: 14,))
                 ),
 
                 Positioned(
-                left: width*0.25,top: height*0.08,
+                left: width*0.25,top: height*0.05,
                 child: Text(widget.mobile,style:TextStyle(color: themewhite,fontSize: 14,))
                 ), 
                 
@@ -55,17 +59,13 @@ class _ShopCardState extends State<ShopCard> {
                    Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return ShopEdit();
+                          return EditDeliveryBoys();
                         }),
                       );
                 },
                 splashRadius: 1,)
                 ), 
   
-                Positioned(
-                left: width*0.45,top:height*0.063,
-                child: SwitchAvailability(),
-                ),
 
             ]
           ),
@@ -73,6 +73,5 @@ class _ShopCardState extends State<ShopCard> {
                 
        
       );
-    
   }
 }

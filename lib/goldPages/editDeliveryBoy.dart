@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/admin.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
-import 'package:foodieshop/goldWidgets/imagecard.dart';
 import 'package:foodieshop/goldWidgets/textBox.dart';
 import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/colorButton.dart';
-import 'package:foodieshop/goldWidgets/unitList.dart';
 
 
-class ShopAdd extends StatelessWidget {
+class  EditDeliveryBoys extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double wt = MediaQuery.of(context).size.width;
@@ -78,41 +76,28 @@ class ShopAdd extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'ADD PRODUCT',
+                  'EDIT DELIVERY BOY',
                   style: commonTextStyle,
                 ),
-                SizedBox(height: 38,),
-                ImageCard(image:'images/Chicken65.jpg',whitecardheight:195,whitecardwidth: 195,imagecardheight: 190,imagecardwidth: 190,),
+               
+              
                 SizedBox(height: 30,),
                 TextBox1(
                   margin: EdgeInsets.only(top: 25, bottom: 15),
-                  hintText: 'Product Name',
-                ),             
+                  hintText: 'Name',
+                ),  
+                 TextBox1(
+                  hintText: 'Mobile Number',
+                ),  
+                  TextBox1(
+                  hintText: 'Salary',
+                ),         
                 TextBox1(
                   height: 90,
-                  hintText: 'Description',
+                  hintText: 'Notes.',
                   maxLines: 5,
                 ),
-                 
-                  Row(
-                    children:[
-                        TextBox1(
-                        margin: EdgeInsets.only(top: 25, bottom: 15),
-                        hintText: 'Quantity',
-                        width: 150,
-                        ),
-                        
-                         Container(
-                           padding: EdgeInsets.only(left:20),
-                           child: UnitList()
-                           ),
-                        ] 
-                  ),
-               
- 
-                TextBox1(
-                  hintText: 'RS/:',
-                ),
+                   
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   child: Divider(
@@ -133,7 +118,7 @@ class ShopAdd extends StatelessWidget {
                             _showMyDialog();
                           },
                           buttonColor: Colors.red,
-                          buttonText: 'CANCEL',
+                          buttonText: 'DELETE',
                           padding: wt > 600
                               ? EdgeInsets.symmetric(
                                   horizontal: 100, vertical: 20)
@@ -149,7 +134,7 @@ class ShopAdd extends StatelessWidget {
                             print('Create a new hotel entry');
                           },
                           buttonColor: themegreen,
-                          buttonText: 'CREATE',
+                          buttonText: 'UPDATE',
                           padding: wt > 600
                               ? EdgeInsets.symmetric(
                                   horizontal: 100, vertical: 20)
@@ -168,3 +153,4 @@ class ShopAdd extends StatelessWidget {
     );
   }
 }
+
