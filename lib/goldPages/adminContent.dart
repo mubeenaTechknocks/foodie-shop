@@ -49,7 +49,7 @@ class _AdmincontentsState extends State<Admincontents> {
                 border: InputBorder.none,
                 
                 icon: Icon(Icons.search,color:themewhite,size: 35,),
-                hintText: "SEARCH FOR SHOPS AND HOTELS",
+                hintText: "SEARCH FOR PRODUCTS",
                 hintStyle: TextStyle(color:themedimwhite,fontSize: 14),
                 focusColor: themewhite,
               ),),

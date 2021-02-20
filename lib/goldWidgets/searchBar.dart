@@ -5,7 +5,7 @@ class Searchbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    // double height = MediaQuery.of(context).size.height;
     return Container(
         // color: Colors.red,
         height: 100,
@@ -38,7 +38,9 @@ class Searchbar extends StatelessWidget {
                 focusColor: themewhite,
               ),),
                  ),//text inputbox container
-              Divider(thickness: 7,color: themegreen,endIndent: 45,indent: 45,)
+              Divider(thickness: 7,color: themegreen,
+              // endIndent: 45,indent: 45,
+              ),
                   ]
               ),
           

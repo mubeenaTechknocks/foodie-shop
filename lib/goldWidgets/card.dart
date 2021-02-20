@@ -9,7 +9,7 @@ class ShopCard extends StatefulWidget {
  final String location;
  final String mobile;
 
-  const ShopCard({Key key, this.hotelname, this.location, this.mobile}) : super(key: key);
+  const ShopCard({Key key, this.hotelname='', this.location='', this.mobile=''}) : super(key: key);
 
   @override
   _ShopCardState createState() => _ShopCardState();
@@ -63,7 +63,7 @@ class _ShopCardState extends State<ShopCard> {
                 ), 
   
                 Positioned(
-                left: width*0.45,top:height*0.063,
+                left: width*0.49,top:height*0.063,
                 child: SwitchAvailability(),
                 ),
 
