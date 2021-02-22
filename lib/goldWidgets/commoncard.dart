@@ -23,7 +23,7 @@ class _CommonCardState extends State<CommonCard> {
         color: themedimbalck,
         shape: RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.circular(20)),
-        child: Container(height: 100,
+        child: Container(height: height*.11,
           child: Stack(
             children:[ 
               
@@ -32,7 +32,7 @@ class _CommonCardState extends State<CommonCard> {
                 child: CircleAvatar(
                   backgroundColor: themegreen,
                  backgroundImage: AssetImage('images/call.png'),
-                 radius: 38,
+                 radius: 30,
                  ), 
               ),
   

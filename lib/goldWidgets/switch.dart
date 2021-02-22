@@ -18,9 +18,9 @@ class _SwitchAvailabilityState extends State<SwitchAvailability> {
               print(isSwitched);
             });
           },
-          inactiveTrackColor: Colors.red[500],
+          inactiveTrackColor: Colors.grey[500],
           activeTrackColor: Colors.lightGreenAccent[700],
-          activeColor: Colors.green,
+          activeColor: Colors.white,
         );
      
   }

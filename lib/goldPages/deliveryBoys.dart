@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/addDeliveryBoys.dart';
-import 'package:foodieshop/goldPages/editDeliveryBoy.dart';
 import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/commoncard.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
