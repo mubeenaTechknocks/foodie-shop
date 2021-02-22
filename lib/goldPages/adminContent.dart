@@ -28,6 +28,20 @@ class _AdmincontentsState extends State<Admincontents> {
         width: width,
         child: Column(
           children: [
+            Card(
+              color: themegreen,
+              child: Column(
+              children:[
+                Container(
+                  padding: EdgeInsets.only(left:20,top:10),
+                  height: 50,
+                  width: width,
+                  child: Text("New Orders: 20",style: TextStyle(color:themewhite,fontSize: 22,fontWeight: FontWeight.bold),),
+                
+                  )
+              ]
+            ),),
+
             Container(
               // color: Colors.purple,
               width:width,
@@ -35,7 +49,7 @@ class _AdmincontentsState extends State<Admincontents> {
               child:Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                   
+                    
                      Container(
                        
                        width: width,
