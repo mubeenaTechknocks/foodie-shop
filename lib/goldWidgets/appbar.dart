@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/login.dart';
 import 'package:foodieshop/goldPages/deliveryBoys.dart';
-import 'package:foodieshop/goldWidgets/constraints.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
 
 class FoodieAppbar extends StatefulWidget implements PreferredSizeWidget {
+  final PreferredSizeWidget bottom;
+  final double preferredHeight;
  
   final String title;
-  FoodieAppbar({Key key, this.title})
-      : preferredSize = Size.fromHeight(60.0),
+  FoodieAppbar({Key key, this.title, this.bottom, this.preferredHeight=60.0})
+      : preferredSize = Size.fromHeight(preferredHeight),
         super(key: key);
 
   @override
@@ -23,7 +24,7 @@ class _FoodieAppbarState extends State<FoodieAppbar> {
   @override
   Widget build(BuildContext context) { 
     return AppBar(
-       
+       bottom: widget.bottom,
        elevation: 0,
        shadowColor: themecolor,
        backgroundColor: themecolor,
