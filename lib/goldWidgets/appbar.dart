@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/login.dart';
-import 'package:foodieshop/goldPages/deliveryBoys.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
 
@@ -39,22 +38,7 @@ class _FoodieAppbarState extends State<FoodieAppbar> {
               icon: Image.asset('images/arrowdown.png',),
             
               itemBuilder: (context) => [
-        PopupMenuItem(
-          
-            child: Row(
-            children: <Widget>[
-            GestureDetector(
-              child:  Text('Delevery Boys',style: TextStyle(fontSize:18),),
-              onTap:(){
-              Navigator.push(context, MaterialPageRoute(builder: (context){
-                return DeliveryBoys();
-              }));
-            }
-            
-             ),
-            
-      ],
-    )),
+  
   
         PopupMenuItem(
            

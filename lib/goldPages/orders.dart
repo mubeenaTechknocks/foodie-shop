@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/orderDetails.dart';
+import 'package:foodieshop/goldPages/picked.dart';
+import 'package:foodieshop/goldPages/prepairing.dart';
+import 'package:foodieshop/goldPages/tobePicked.dart';
 import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 import 'package:foodieshop/goldWidgets/orderCard.dart';
@@ -81,7 +84,7 @@ class Orders extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) {
-                                return OrderDetails();
+                                return Preparing();
                               }),
                             );
                           },
@@ -97,7 +100,7 @@ class Orders extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) {
-                                return OrderDetails();
+                                return TobePicked();
                               }),
                             );
                           },
@@ -112,7 +115,7 @@ class Orders extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) {
-                                return OrderDetails();
+                                return Picked();
                               }),
                             );
                           },

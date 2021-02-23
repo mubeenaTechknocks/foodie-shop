@@ -4,66 +4,11 @@ import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/colorButton.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
-class OrderDetails extends StatelessWidget {
+class TobePicked extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double wt = MediaQuery.of(context).size.width;
     double ht = MediaQuery.of(context).size.height;
-    print('width $wt');
-    print('height $ht');
-    Future<void> _showMyDialog() async {
-      return showDialog<void>(
-        context: context,
-        barrierDismissible: false, // user must tap button!
-        builder: (BuildContext context) {
-          return AlertDialog(
-            backgroundColor: themedimbalck,
-            title: Text(
-              'Discard Changes ?',
-              style: commonTextStyle,
-            ),
-            content: SingleChildScrollView(
-              child: ListBody(
-                children: <Widget>[
-                  Text(
-                    'Would you like to decline this order ?',
-                    style: commonTextStyle,
-                  ),
-                ],
-              ),
-            ),
-            actions: <Widget>[
-              ColorButton(
-                padding: wt > 600
-                    ? EdgeInsets.symmetric(horizontal: 50, vertical: 15)
-                    : EdgeInsets.symmetric(horizontal: 23, vertical: 8),
-                buttonColor: themegreen,
-                buttonText: ('No'),
-                buttonAction: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              ColorButton(
-                padding: wt > 600
-                    ? EdgeInsets.symmetric(horizontal: 50, vertical: 15)
-                    : EdgeInsets.symmetric(horizontal: 23, vertical: 8),
-                buttonColor: Colors.red,
-                buttonText: ('Yes'),
-                buttonAction: () {
-                  Navigator.pop(context);
-                  Navigator.pop(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return OrderDetails();
-                    }),
-                  );
-                },
-              ),
-            ],
-          );
-        },
-      );
-    }
 
     return Scaffold(
       backgroundColor: themecolor,
@@ -85,45 +30,22 @@ class OrderDetails extends StatelessWidget {
                 OrderSummary(),
                 ItemCard(),
                 BillCard(),
-                SizedBox(
-                  width: double.maxFinite,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: ColorButton(
-                          buttonAction: () {
-                            _showMyDialog();
-                          },
-                          buttonColor: Colors.red,
-                          buttonText: 'DECLINE',
-                          padding: wt > 600
-                              ? EdgeInsets.symmetric(
-                                  horizontal: 100, vertical: 20)
-                              : EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 8),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: ColorButton(
-                          buttonAction: () {
-                            //Add new hotel/shope to the database !!!!
-                            print('PLACE AN ORDER');
-                          },
-                          buttonColor: themegreen,
-                          buttonText: 'ACCEPT',
-                          padding: wt > 600
-                              ? EdgeInsets.symmetric(
-                                  horizontal: 100, vertical: 20)
-                              : EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 8),
-                        ),
-                      ),
-                    ],
-                  ),
-                )
+                Center(
+                  child: ColorButton(
+                            buttonAction: () {
+                              //Add new hotel/shope to the database !!!!
+                              print('ADD THIS ORDER TO PICKED LIST');
+                            },
+                            buttonColor: themegreen,
+                            buttonText: 'PICKED',
+                            padding: wt > 600
+                                ? EdgeInsets.symmetric(
+                                    horizontal: 100, vertical: 25)
+                                : EdgeInsets.symmetric(
+                                    horizontal: 80, vertical: 18),
+                          ),
+                ),
+                SizedBox(height: 30,)
               ],
             ),
           ),
