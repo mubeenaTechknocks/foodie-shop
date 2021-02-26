@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodieshop/goldPages/orders.dart';
 import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/colorButton.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';

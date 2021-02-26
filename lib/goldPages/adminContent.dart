@@ -88,8 +88,8 @@ class _AdmincontentsState extends State<Admincontents> {
                     Divider(
                       thickness: 7,
                       color: themegreen,
-                      endIndent: 45,
-                      indent: 45,
+                      endIndent: 20,
+                      indent: 20,
                     )
                   ]),
             ),

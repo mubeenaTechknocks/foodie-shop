@@ -102,7 +102,7 @@ class OrderDetails extends StatelessWidget {
                               ? EdgeInsets.symmetric(
                                   horizontal: 100, vertical: 20)
                               : EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 8),
+                                  horizontal: 25, vertical: 10),
                         ),
                       ),
                       Expanded(
@@ -118,7 +118,7 @@ class OrderDetails extends StatelessWidget {
                               ? EdgeInsets.symmetric(
                                   horizontal: 100, vertical: 20)
                               : EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 8),
+                                  horizontal: 25, vertical: 10),
                         ),
                       ),
                     ],
