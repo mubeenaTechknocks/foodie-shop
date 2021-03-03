@@ -7,7 +7,6 @@ import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/colorButton.dart';
 import 'package:foodieshop/goldWidgets/unitList.dart';
 
-
 class ShopAdd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -54,10 +53,9 @@ class ShopAdd extends StatelessWidget {
                 buttonColor: Colors.red,
                 buttonText: ('Yes'),
                 buttonAction: () {
-                  Navigator.pop(
-                    context,
-                    MaterialPageRoute(builder: (context) => Admin()),
-                  );
+                  Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => Admin()),
+                      (Route<dynamic> route) => false);
                 },
               ),
             ],
@@ -81,35 +79,37 @@ class ShopAdd extends StatelessWidget {
                   'ADD PRODUCT',
                   style: commonTextStyle,
                 ),
-                SizedBox(height: 38,),
-                ImageCard(image:'images/Chicken65.jpg',whitecardheight:195,whitecardwidth: 195,imagecardheight: 190,imagecardwidth: 190,),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 38,
+                ),
+                ImageCard(
+                  image: 'images/Chicken65.jpg',
+                  whitecardheight: 195,
+                  whitecardwidth: 195,
+                  imagecardheight: 190,
+                  imagecardwidth: 190,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 TextBox1(
                   margin: EdgeInsets.only(top: 25, bottom: 15),
                   hintText: 'Product Name',
-                ),             
+                ),
                 TextBox1(
                   height: 90,
                   hintText: 'Description',
                   maxLines: 5,
                 ),
-                 
-                  Row(
-                    children:[
-                        TextBox1(
-                        margin: EdgeInsets.only(top: 25, bottom: 15),
-                        hintText: 'Quantity',
-                        width: 150,
-                        ),
-                        
-                         Container(
-                           padding: EdgeInsets.only(left:20),
-                           child: UnitList()
-                           ),
-                        ] 
+                Row(children: [
+                  TextBox1(
+                    margin: EdgeInsets.only(top: 25, bottom: 15),
+                    hintText: 'Quantity',
+                    width: 150,
                   ),
-               
- 
+                  Container(
+                      padding: EdgeInsets.only(left: 20), child: UnitList()),
+                ]),
                 TextBox1(
                   hintText: 'RS/:',
                 ),
@@ -120,7 +120,6 @@ class ShopAdd extends StatelessWidget {
                     thickness: 3,
                   ),
                 ),
-                
                 SizedBox(
                   width: double.maxFinite,
                   child: Row(
@@ -145,8 +144,12 @@ class ShopAdd extends StatelessWidget {
                         flex: 1,
                         child: ColorButton(
                           buttonAction: () {
-                            //Add new hotel/shope to the database !!!!
-                            print('Create a new hotel entry');
+                            Navigator.of(context).pushAndRemoveUntil(
+                                MaterialPageRoute(
+                                    builder: (context) => Admin()),
+                                (Route<dynamic> route) => false);
+                            //TODO: Add new product to the database !!!!
+                            print('Create a new product entry');
                           },
                           buttonColor: themegreen,
                           buttonText: 'CREATE',

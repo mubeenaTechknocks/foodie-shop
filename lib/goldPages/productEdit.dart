@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodieshop/goldPages/admin.dart';
+import 'package:foodieshop/goldPages/product.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 import 'package:foodieshop/goldWidgets/imagecard.dart';
 import 'package:foodieshop/goldWidgets/textBox.dart';
@@ -14,13 +15,14 @@ class ProductEdit extends StatelessWidget {
     double ht = MediaQuery.of(context).size.height;
     print('width $wt');
     print('height $ht');
+    //Implements alert dialog
     Future<void> _showMyDialog() async {
       return showDialog<void>(
         context: context,
         barrierDismissible: false, // user must tap button!
         builder: (BuildContext context) {
           return AlertDialog(
-            backgroundColor: themedimbalck,
+            backgroundColor: themecolor,
             title: Text(
               'Discard Changes ?',
               style: commonTextStyle,
@@ -29,7 +31,7 @@ class ProductEdit extends StatelessWidget {
               child: ListBody(
                 children: <Widget>[
                   Text(
-                    'Would you like to discard all changes',
+                    'Would you like to delete this product',
                     style: commonTextStyle,
                   ),
                 ],
@@ -37,9 +39,7 @@ class ProductEdit extends StatelessWidget {
             ),
             actions: <Widget>[
               ColorButton(
-                padding: wt > 600
-                    ? EdgeInsets.symmetric(horizontal: 50, vertical: 15)
-                    : EdgeInsets.symmetric(horizontal: 23, vertical: 8),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 buttonColor: themegreen,
                 buttonText: ('No'),
                 buttonAction: () {
@@ -47,16 +47,14 @@ class ProductEdit extends StatelessWidget {
                 },
               ),
               ColorButton(
-                padding: wt > 600
-                    ? EdgeInsets.symmetric(horizontal: 50, vertical: 15)
-                    : EdgeInsets.symmetric(horizontal: 23, vertical: 8),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 buttonColor: Colors.red,
                 buttonText: ('Yes'),
                 buttonAction: () {
-                  Navigator.pop(
-                    context,
-                    MaterialPageRoute(builder: (context) => Admin()),
-                  );
+                  Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => Admin()),
+                      (Route<dynamic> route) => false);
+                  //TODO: Delete this product
                 },
               ),
             ],
@@ -145,8 +143,11 @@ class ProductEdit extends StatelessWidget {
                         flex: 1,
                         child: ColorButton(
                           buttonAction: () {
-                            //Add new hotel/shope to the database !!!!
-                            print('Create a new hotel entry');
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(builder: (context) {
+                              return Product();
+                            }));
+                            //TODO: Update these fields in data base
                           },
                           buttonColor: themegreen,
                           buttonText: 'UPDATE',

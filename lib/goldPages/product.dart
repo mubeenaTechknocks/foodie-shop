@@ -13,12 +13,10 @@ class Product extends StatelessWidget {
         child: Icon(Icons.edit),
         backgroundColor: themegreen,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) {
-              return ProductEdit();
-            }),
-          );
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return ProductEdit();
+          }));
         },
       ),
       body: CustomScrollView(
