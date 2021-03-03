@@ -65,8 +65,7 @@ class _AdmincontentsState extends State<Admincontents> {
                   children: [
                     Container(
                       width: width,
-                      //  color: Colors.green,
-
+                      // color: Colors.green,
                       margin: EdgeInsets.symmetric(horizontal: width * 0.1),
                       child: TextField(
                         style: TextStyle(color: themewhite, fontSize: 18),

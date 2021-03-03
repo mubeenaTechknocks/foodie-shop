@@ -7,8 +7,7 @@ import 'package:foodieshop/goldWidgets/appbar.dart';
 import 'package:foodieshop/goldWidgets/colorButton.dart';
 import 'package:foodieshop/goldWidgets/unitList.dart';
 
-
-class ShopEdit extends StatelessWidget {
+class ProductEdit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double wt = MediaQuery.of(context).size.width;
@@ -81,35 +80,37 @@ class ShopEdit extends StatelessWidget {
                   'EDIT PRODUCT',
                   style: commonTextStyle,
                 ),
-                SizedBox(height: 38,),
-                ImageCard(image:'images/Chicken65.jpg',whitecardheight:195,whitecardwidth: 195,imagecardheight: 190,imagecardwidth: 190,),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 38,
+                ),
+                ImageCard(
+                  image: 'images/Chicken65.jpg',
+                  whitecardheight: 195,
+                  whitecardwidth: 195,
+                  imagecardheight: 190,
+                  imagecardwidth: 190,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 TextBox1(
                   margin: EdgeInsets.only(top: 25, bottom: 15),
                   hintText: 'Product Name',
-                ),             
+                ),
                 TextBox1(
                   height: 90,
                   hintText: 'Description',
                   maxLines: 5,
                 ),
-                 
-                  Row(
-                    children:[
-                        TextBox1(
-                        margin: EdgeInsets.only(top: 25, bottom: 15),
-                        hintText: 'Quantity',
-                        width: 150,
-                        ),
-                        
-                         Container(
-                           padding: EdgeInsets.only(left:20),
-                           child: UnitList()
-                           ),
-                        ] 
+                Row(children: [
+                  TextBox1(
+                    margin: EdgeInsets.only(top: 25, bottom: 15),
+                    hintText: 'Quantity',
+                    width: 150,
                   ),
-               
- 
+                  Container(
+                      padding: EdgeInsets.only(left: 20), child: UnitList()),
+                ]),
                 TextBox1(
                   hintText: 'RS/:',
                 ),
@@ -120,7 +121,6 @@ class ShopEdit extends StatelessWidget {
                     thickness: 3,
                   ),
                 ),
-                
                 SizedBox(
                   width: double.maxFinite,
                   child: Row(

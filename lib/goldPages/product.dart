@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodieshop/goldPages/shopEdit.dart';
-import 'package:foodieshop/goldWidgets/appbar.dart';
+import 'package:foodieshop/goldPages/productEdit.dart';
 import 'package:foodieshop/goldWidgets/goldSetting.dart';
 
 class Product extends StatelessWidget {
@@ -17,7 +16,7 @@ class Product extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) {
-              return ShopEdit();
+              return ProductEdit();
             }),
           );
         },
@@ -96,7 +95,7 @@ class Product extends StatelessWidget {
                       color: themegreen,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical:10.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: Text(
                         'Chicken 65 is a spicy, deep-fried chicken dish originating from Hotel Buhari, Chennai, India, as an entrée, or quick snack. The flavour of the dish can be attributed to red chillies, but the exact set of ingredients for the recipe can vary. It can be prepared using boneless or bone-in chicken and is usually served with onion and lemon garnish.',
                         textAlign: TextAlign.justify,
