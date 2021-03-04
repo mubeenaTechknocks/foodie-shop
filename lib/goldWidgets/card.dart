@@ -23,7 +23,7 @@ class ShopCard extends StatefulWidget {
 class _ShopCardState extends State<ShopCard> {
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       onPressed: widget.onPressed,
       child: Card(
         color: themedimbalck,
@@ -53,28 +53,27 @@ class _ShopCardState extends State<ShopCard> {
                             ),
                             fit: BoxFit.fill)),
                   ),
-                   Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                     child: Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         Text(widget.hotelname,
-                                    style: TextStyle(
-                                        color: themewhite,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w800)),
-                         Text(widget.location,
-                  style: TextStyle(
-                      color: themewhite,
-                      fontSize: 14,
-                  ))
-                       ],
-                     ),
-                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(widget.hotelname,
+                            style: TextStyle(
+                                color: themewhite,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w800)),
+                        Text(widget.location,
+                            style: TextStyle(
+                              color: themewhite,
+                              fontSize: 14,
+                            ))
+                      ],
+                    ),
+                  ),
                 ],
               ),
               SwitchAvailability(),
-              
             ],
           ),
         ),
